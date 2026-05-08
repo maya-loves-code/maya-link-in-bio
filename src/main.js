@@ -80,9 +80,8 @@ app.innerHTML = `
       <div class="screen">
         <div class="boot-gloss" aria-hidden="true"></div>
 
-        <header class="menu-bar" aria-label="Creator workspace">
-          <span class="menu-brand">Creator workspace</span>
-          <span class="menu-site">Links, apps, and current favorites</span>
+        <header class="menu-bar" aria-label="Workspace controls">
+          <span class="menu-spacer" aria-hidden="true"></span>
           <span class="menu-controls" aria-hidden="true">
             <span></span>
             <span></span>
@@ -96,12 +95,10 @@ app.innerHTML = `
               <span class="traffic red"></span>
               <span class="traffic yellow"></span>
               <span class="traffic green"></span>
-              <span class="window-title">About Maya</span>
             </div>
             <div class="profile-body">
               <img src="${content.profile.photo}" alt="${content.profile.name}" />
               <div class="profile-copy">
-                <p class="tiny-label">creator notes</p>
                 <h1 id="profile-title">${content.profile.name}</h1>
                 <p>${content.profile.bio}</p>
               </div>
