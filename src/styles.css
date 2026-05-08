@@ -139,6 +139,7 @@ img {
 
 .menu-brand {
   justify-self: start;
+  color: rgba(16, 22, 21, 0.56);
 }
 
 .menu-controls {
