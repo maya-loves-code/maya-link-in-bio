@@ -21,6 +21,27 @@ const iconMarkup = {
   bag: '<span class="glyph bag-glyph"></span>',
 };
 
+const socialIconMarkup = {
+  youtube: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21.4 7.1a3 3 0 0 0-2.1-2.1C17.5 4.5 12 4.5 12 4.5s-5.5 0-7.3.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2.1 12a31 31 0 0 0 .5 4.9 3 3 0 0 0 2.1 2.1c1.8.5 7.3.5 7.3.5s5.5 0 7.3-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.9 31 31 0 0 0-.5-4.9Z" />
+      <path class="icon-cutout" d="m10.2 15.4 5.1-3.4-5.1-3.4v6.8Z" />
+    </svg>
+  `,
+  instagram: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="4" y="4" width="16" height="16" rx="5" />
+      <circle class="icon-cutout" cx="12" cy="12" r="3.2" />
+      <circle class="icon-cutout" cx="16.7" cy="7.3" r="1.1" />
+    </svg>
+  `,
+  tiktok: `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14.3 3.8h3a5.6 5.6 0 0 0 3.6 3.9v3a8.2 8.2 0 0 1-3.7-.9v5.3a5.3 5.3 0 1 1-5.3-5.3c.4 0 .8 0 1.1.1v3.2a2.1 2.1 0 1 0 1.3 2V3.8Z" />
+    </svg>
+  `,
+};
+
 function desktopIconMarkup(item, index) {
   return `
     <a
@@ -42,13 +63,13 @@ function desktopIconMarkup(item, index) {
 function dockMarkup(item, index) {
   return `
     <a
-      class="dock-icon"
+      class="dock-icon ${item.platform}"
       style="--delay: ${index * 70 + 960}ms"
       href="${safeHref(item.url)}"
       ${targetAttrs(item.url)}
       aria-label="${item.label}"
     >
-      <span aria-hidden="true">${item.shortLabel}</span>
+      ${socialIconMarkup[item.platform] ?? ""}
     </a>
   `;
 }
@@ -59,9 +80,9 @@ app.innerHTML = `
       <div class="screen">
         <div class="boot-gloss" aria-hidden="true"></div>
 
-        <header class="menu-bar" aria-label="MayaDesk menu bar">
-          <span class="menu-brand">MayaDesk</span>
-          <span class="menu-site">mayabello.com</span>
+        <header class="menu-bar" aria-label="Creator workspace">
+          <span class="menu-brand">Creator workspace</span>
+          <span class="menu-site">Links, apps, and current favorites</span>
           <span class="menu-controls" aria-hidden="true">
             <span></span>
             <span></span>
@@ -75,26 +96,26 @@ app.innerHTML = `
               <span class="traffic red"></span>
               <span class="traffic yellow"></span>
               <span class="traffic green"></span>
-              <span class="window-title">profile.exe</span>
+              <span class="window-title">About Maya</span>
             </div>
             <div class="profile-body">
               <img src="${content.profile.photo}" alt="${content.profile.name}" />
               <div class="profile-copy">
-                <p class="tiny-label">currently online</p>
+                <p class="tiny-label">creator notes</p>
                 <h1 id="profile-title">${content.profile.name}</h1>
                 <p>${content.profile.bio}</p>
               </div>
             </div>
           </section>
 
-          <aside class="window sticky-window" aria-label="MayaDesk note">
+          <aside class="window sticky-window" aria-label="Creator note">
             <div class="window-bar" aria-hidden="true">
               <span class="traffic red"></span>
               <span class="traffic yellow"></span>
               <span class="traffic green"></span>
-              <span class="window-title">note.txt</span>
+              <span class="window-title">Latest</span>
             </div>
-            <p>Tap an icon. Go somewhere useful.</p>
+            <p>A few things I’m building and loving lately.</p>
           </aside>
 
           <nav class="desktop-icons" aria-label="Primary links">
