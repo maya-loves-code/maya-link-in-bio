@@ -1,0 +1,13 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="54" fill="#FFFDF8"/>
+  <rect x="48" y="48" width="1184" height="624" rx="46" fill="#1A998F"/>
+  <circle cx="1022" cy="164" r="86" fill="#FFC857"/>
+  <circle cx="210" cy="188" r="12" fill="#FFFDF8"/>
+  <circle cx="256" cy="256" r="8" fill="#FFFDF8"/>
+  <circle cx="1092" cy="520" r="11" fill="#FFFDF8"/>
+  <path d="M128 511C202 387 304 325 434 325C564 325 665 387 737 511H128Z" fill="#FFFDF8" fill-opacity=".9"/>
+  <path d="M314 476C404 337 532 267 698 267C863 267 991 337 1080 476H314Z" fill="#FFFDF8" fill-opacity=".62"/>
+  <rect x="390" y="218" width="500" height="284" rx="52" fill="#17201F"/>
+  <path d="M701 360L602 423V297L701 360Z" fill="#FFC857"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#FFFDF8">LATEST VIDEO</text>
+</svg>
