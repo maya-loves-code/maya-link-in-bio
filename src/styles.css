@@ -345,15 +345,15 @@ h1 {
 }
 
 .desktop-icon.featured .icon-tile {
-  background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+  background: linear-gradient(135deg, #075d58, #1a998f);
 }
 
 .rocket {
-  background: linear-gradient(135deg, #0b6460, #1a998f);
+  background: linear-gradient(135deg, #213c4a, #0f7772);
 }
 
 .spark {
-  background: linear-gradient(135deg, #126f69, #65bbb4);
+  background: linear-gradient(135deg, #5d867c, #9bb8a2);
 }
 
 .coffee {
