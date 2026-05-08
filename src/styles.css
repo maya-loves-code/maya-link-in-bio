@@ -137,8 +137,8 @@ img {
   backdrop-filter: blur(18px);
 }
 
-.menu-spacer {
-  min-width: 1px;
+.menu-brand {
+  justify-self: start;
 }
 
 .menu-controls {
