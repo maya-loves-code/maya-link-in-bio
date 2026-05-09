@@ -113,7 +113,7 @@ app.innerHTML = `
               <span class="traffic green"></span>
               <span class="window-title">Latest</span>
             </div>
-            <p>A few things I’m building and loving lately.</p>
+            <p>Join the Side Quest Slayer beta</p>
           </aside>
 
           <nav class="desktop-icons" aria-label="Primary links">
