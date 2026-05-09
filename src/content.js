@@ -20,6 +20,11 @@ export const content = {
       platform: "tiktok",
       url: "https://www.tiktok.com/@maya_loves_code",
     },
+    {
+      label: "Threads",
+      platform: "threads",
+      url: "https://www.threads.com/@maya_loves_code",
+    },
   ],
   apps: [
     {

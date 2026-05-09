@@ -44,6 +44,9 @@ const socialIconMarkup = {
       <path d="M14.3 3.8h3a5.6 5.6 0 0 0 3.6 3.9v3a8.2 8.2 0 0 1-3.7-.9v5.3a5.3 5.3 0 1 1-5.3-5.3c.4 0 .8 0 1.1.1v3.2a2.1 2.1 0 1 0 1.3 2V3.8Z" />
     </svg>
   `,
+  threads: `
+    <span class="threads-glyph" aria-hidden="true">@</span>
+  `,
 };
 
 function desktopIconMarkup(item, index) {
