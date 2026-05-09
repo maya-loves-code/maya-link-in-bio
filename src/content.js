@@ -53,6 +53,13 @@ export const content = {
       icon: "bag",
       url: "https://a.co/d/08iaAskD",
     },
+    {
+      label: "Work With Me",
+      detail: "Brand inquiries",
+      icon: "mail",
+      url: "mailto:mayalovescode@gmail.com?subject=Brand%20Inquiry",
+      ariaLabel: "Work With Me — Brand inquiries",
+    },
   ],
   affiliateDisclosure:
     "Amazon links may be affiliate links. I may earn a commission at no extra cost to you.",

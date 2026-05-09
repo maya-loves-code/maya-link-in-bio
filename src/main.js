@@ -9,7 +9,9 @@ const isPlaceholderUrl = (url = "") =>
 const safeHref = (url) => (isPlaceholderUrl(url) ? "#" : url);
 
 const targetAttrs = (url) =>
-  isPlaceholderUrl(url)
+  url?.startsWith("mailto:")
+    ? ""
+    : isPlaceholderUrl(url)
     ? 'aria-disabled="true"'
     : 'target="_blank" rel="noreferrer"';
 
@@ -20,6 +22,7 @@ const iconMarkup = {
   spark: '<span class="glyph spark-glyph"></span>',
   coffee: '<span class="glyph coffee-glyph"></span>',
   bag: '<span class="glyph bag-glyph"></span>',
+  mail: '<span class="glyph mail-glyph"></span>',
 };
 
 const socialIconMarkup = {
@@ -50,7 +53,7 @@ function desktopIconMarkup(item, index) {
       style="--delay: ${index * 80 + 520}ms"
       href="${safeHref(item.url)}"
       ${targetAttrs(item.url)}
-      aria-label="${item.label}: ${item.detail}"
+      aria-label="${item.ariaLabel ?? `${item.label}: ${item.detail}`}"
     >
       <span class="icon-tile ${item.icon}" aria-hidden="true">
         ${iconMarkup[item.icon] ?? ""}
