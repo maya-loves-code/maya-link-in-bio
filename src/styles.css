@@ -351,6 +351,10 @@ h1 {
   background: linear-gradient(135deg, #075d58, #1a998f);
 }
 
+.app {
+  background: linear-gradient(135deg, #1f4050, #0f7772);
+}
+
 .rocket {
   background: linear-gradient(135deg, #213c4a, #0f7772);
 }
@@ -381,6 +385,25 @@ h1 {
   border-bottom: 14px solid transparent;
   border-left: 22px solid #fff;
   filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18));
+}
+
+.coming-soon-glyph {
+  width: 52px;
+  min-height: 28px;
+  display: grid;
+  place-items: center;
+  padding: 4px 5px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: 850;
+  line-height: 1.02;
+  text-align: center;
+  text-transform: uppercase;
+  text-wrap: balance;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
 }
 
 .rocket-glyph {

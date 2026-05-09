@@ -15,6 +15,7 @@ const targetAttrs = (url) =>
 
 const iconMarkup = {
   play: '<span class="glyph play-glyph"></span>',
+  app: '<span class="glyph coming-soon-glyph">Coming Soon</span>',
   rocket: '<span class="glyph rocket-glyph"></span>',
   spark: '<span class="glyph spark-glyph"></span>',
   coffee: '<span class="glyph coffee-glyph"></span>',
