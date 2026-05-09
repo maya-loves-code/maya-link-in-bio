@@ -39,7 +39,7 @@ export const content = {
       label: "Join Beta Testing",
       detail: "Test Side Quest Slayer",
       icon: "spark",
-      url: "APP_TWO_TESTER_FORM_URL",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSfd7-zDLKNcxnC06dKqQzqwl__xGyy7C8r_2Sc23Gi1jEhD3Q/viewform?usp=sharing&ouid=100448004671630776622",
     },
     {
       label: "Buy Me a Coffee",

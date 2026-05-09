@@ -347,6 +347,23 @@ h1 {
     0 14px 24px rgba(3, 48, 45, 0.2);
 }
 
+.desktop-icon[aria-disabled="true"] {
+  cursor: default;
+}
+
+.desktop-icon[aria-disabled="true"] .icon-tile,
+.desktop-icon[aria-disabled="true"] .icon-label,
+.desktop-icon[aria-disabled="true"] .icon-detail {
+  opacity: 0.72;
+}
+
+.desktop-icon[aria-disabled="true"]:hover .icon-tile {
+  transform: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 10px 18px rgba(3, 48, 45, 0.16);
+}
+
 .desktop-icon.featured .icon-tile {
   background: linear-gradient(135deg, #075d58, #1a998f);
 }
@@ -392,10 +409,7 @@ h1 {
   min-height: 28px;
   display: grid;
   place-items: center;
-  padding: 4px 5px;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  border-radius: 9px;
-  background: rgba(255, 255, 255, 0.16);
+  padding: 0 2px;
   color: #fff;
   font-size: 0.5rem;
   font-weight: 850;
@@ -403,7 +417,6 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   text-wrap: balance;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
 }
 
 .rocket-glyph {
