@@ -49,6 +49,9 @@ const socialIconMarkup = {
   `,
 };
 
+const betaTestingUrl =
+  content.apps.find((item) => item.label === "Join Beta Testing")?.url ?? "#";
+
 function desktopIconMarkup(item, index) {
   return `
     <a
@@ -113,7 +116,12 @@ app.innerHTML = `
             </div>
           </section>
 
-          <aside class="window sticky-window" aria-label="Creator note">
+          <a
+            class="window sticky-window"
+            href="${safeHref(betaTestingUrl)}"
+            ${targetAttrs(betaTestingUrl)}
+            aria-label="Join the Side Quest Slayer beta"
+          >
             <div class="window-bar" aria-hidden="true">
               <span class="traffic red"></span>
               <span class="traffic yellow"></span>
@@ -121,7 +129,7 @@ app.innerHTML = `
               <span class="window-title">Latest</span>
             </div>
             <p>Join the Side Quest Slayer beta</p>
-          </aside>
+          </a>
 
           <nav class="desktop-icons" aria-label="Primary links">
             ${content.apps.map(desktopIconMarkup).join("")}
