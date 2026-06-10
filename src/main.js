@@ -140,7 +140,12 @@ app.innerHTML = `
           <nav class="social-dock" aria-label="Social links">
             ${content.socials.map(dockMarkup).join("")}
           </nav>
-          <p class="disclosure">${content.affiliateDisclosure}</p>
+          <div class="footer-meta">
+            <p class="disclosure">${content.affiliateDisclosure}</p>
+            <a class="company-link" href="/mb-creative-enterprises">
+              MB Creative Enterprises LLC
+            </a>
+          </div>
         </footer>
       </div>
       <div class="laptop-base" aria-hidden="true"></div>
