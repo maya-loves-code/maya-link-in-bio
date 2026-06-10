@@ -6,7 +6,17 @@
       "has": [
         {
           "type": "host",
-          "value": "^(?:www\\.)?mbcreativeenterprises\\.com$"
+          "value": "mbcreativeenterprises.com"
+        }
+      ],
+      "destination": "/mb-creative-enterprises/index.html"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.mbcreativeenterprises.com"
         }
       ],
       "destination": "/mb-creative-enterprises/index.html"
