@@ -7,6 +7,17 @@ const cleanPageRoutes = new Map([
   ["/terms", "/terms/index.html"],
 ]);
 
+const companyHosts = new Set([
+  "mbcreativeenterprises.com",
+  "www.mbcreativeenterprises.com",
+]);
+
+const siteHosts = [
+  ...companyHosts,
+  "mayabello.com",
+  "www.mayabello.com",
+];
+
 function cleanPageRoutesPlugin() {
   const rewriteCleanPageRoute = (request, _response, next) => {
     if (request.method !== "GET" && request.method !== "HEAD") {
@@ -15,7 +26,12 @@ function cleanPageRoutesPlugin() {
     }
 
     const requestUrl = new URL(request.url ?? "/", "http://vite.local");
-    const destination = cleanPageRoutes.get(requestUrl.pathname);
+    const requestHost = request.headers.host?.split(":")[0].toLowerCase();
+    const isCompanyHost = companyHosts.has(requestHost);
+    const destination =
+      isCompanyHost && requestUrl.pathname === "/"
+        ? "/mb-creative-enterprises/index.html"
+        : cleanPageRoutes.get(requestUrl.pathname);
 
     if (destination) {
       request.url = `${destination}${requestUrl.search}`;
@@ -38,6 +54,12 @@ function cleanPageRoutesPlugin() {
 export default defineConfig({
   appType: "mpa",
   plugins: [cleanPageRoutesPlugin()],
+  server: {
+    allowedHosts: siteHosts,
+  },
+  preview: {
+    allowedHosts: siteHosts,
+  },
   build: {
     rollupOptions: {
       input: {
