@@ -2,26 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "mbcreativeenterprises.com"
-        }
-      ],
-      "destination": "/mb-creative-enterprises/index.html"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.mbcreativeenterprises.com"
-        }
-      ],
-      "destination": "/mb-creative-enterprises/index.html"
-    },
-    {
       "source": "/mb-creative-enterprises",
       "destination": "/mb-creative-enterprises/index.html"
     },
