@@ -9,6 +9,10 @@ LLC:
 - `/privacy`
 - `/terms`
 
+Requests to `mbcreativeenterprises.com` and `www.mbcreativeenterprises.com` use
+hostname-aware rewrites to render the company page at `/` while keeping the
+company-domain URL in the browser.
+
 ## Local Setup
 
 ```bash

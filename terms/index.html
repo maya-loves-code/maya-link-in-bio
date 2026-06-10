@@ -7,7 +7,7 @@
       name="description"
       content="Terms of Service for the MB Creative Enterprises LLC company website."
     />
-    <link rel="canonical" href="https://mayabello.com/terms" />
+    <link rel="canonical" href="https://mbcreativeenterprises.com/terms" />
     <meta
       property="og:title"
       content="Terms of Service | MB Creative Enterprises LLC"
@@ -17,17 +17,24 @@
       content="Terms governing use of the MB Creative Enterprises LLC company website."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mayabello.com/terms" />
+    <meta
+      property="og:url"
+      content="https://mbcreativeenterprises.com/terms"
+    />
     <title>Terms of Service | MB Creative Enterprises LLC</title>
     <link rel="stylesheet" href="/src/company.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/mb-creative-enterprises">
+      <a
+        class="brand"
+        href="/mb-creative-enterprises"
+        data-company-home
+      >
         MB Creative Enterprises LLC
       </a>
       <nav class="site-nav" aria-label="Company">
-        <a href="/mb-creative-enterprises">Company</a>
+        <a href="/mb-creative-enterprises" data-company-home>Company</a>
         <a href="/privacy">Privacy</a>
       </nav>
     </header>
@@ -125,10 +132,11 @@
     <footer class="site-footer">
       <p>&copy; 2026 MB Creative Enterprises LLC</p>
       <nav class="footer-links" aria-label="Legal and related links">
-        <a href="/mb-creative-enterprises">Company</a>
+        <a href="/mb-creative-enterprises" data-company-home>Company</a>
         <a href="/privacy">Privacy Policy</a>
-        <a href="/">mayabello.com</a>
+        <a href="https://mayabello.com/">mayabello.com</a>
       </nav>
     </footer>
+    <script type="module" src="/src/company.js"></script>
   </body>
 </html>
