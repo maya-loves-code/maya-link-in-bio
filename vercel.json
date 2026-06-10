@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/mb-creative-enterprises",
+      "destination": "/mb-creative-enterprises/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    }
+  ]
+}

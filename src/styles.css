@@ -626,6 +626,30 @@ h1 {
   animation: fadeIn 520ms 1080ms ease-out both;
 }
 
+.footer-meta {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.company-link {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.68rem;
+  font-weight: 650;
+  text-underline-offset: 3px;
+  transition: color 180ms ease;
+}
+
+.company-link:hover {
+  color: #fff;
+}
+
+.company-link:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
 .laptop-base {
   width: min(88%, 760px);
   height: 18px;
@@ -799,6 +823,10 @@ a[aria-disabled="true"] {
 
   .disclosure {
     text-align: center;
+  }
+
+  .footer-meta {
+    justify-items: center;
   }
 
   .laptop-base {

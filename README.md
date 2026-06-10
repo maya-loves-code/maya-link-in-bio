@@ -2,6 +2,13 @@
 
 A static, tutorial-friendly link-in-bio page for `mayabello.com`.
 
+The project also includes company and legal pages for MB Creative Enterprises
+LLC:
+
+- `/mb-creative-enterprises`
+- `/privacy`
+- `/terms`
+
 ## Local Setup
 
 ```bash
