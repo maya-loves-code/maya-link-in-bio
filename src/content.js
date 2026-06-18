@@ -41,10 +41,11 @@ export const content = {
       url: "APP_ONE_URL",
     },
     {
-      label: "Join Beta Testing",
-      detail: "Test Side Quest Slayer",
+      label: "Free mentorship, community & opportunities →",
+      detail: "Join Rewriting the Code",
       icon: "spark",
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSfd7-zDLKNcxnC06dKqQzqwl__xGyy7C8r_2Sc23Gi1jEhD3Q/viewform?usp=sharing&ouid=100448004671630776622",
+      url: "https://rewritingthecode.org/join-us/?utm_source=tiktok&utm_medium=influencer&utm_campaign=mayalovescode_2026",
+      featuredCta: true,
     },
     {
       label: "Buy Me a Coffee",
