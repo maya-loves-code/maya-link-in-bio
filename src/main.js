@@ -120,7 +120,7 @@ app.innerHTML = `
             class="window sticky-window"
             href="${safeHref(featuredCtaUrl)}"
             ${targetAttrs(featuredCtaUrl)}
-            aria-label="Free mentorship, community & opportunities"
+            aria-label="Free mentorship & opportunities"
           >
             <div class="window-bar" aria-hidden="true">
               <span class="traffic red"></span>
@@ -128,7 +128,7 @@ app.innerHTML = `
               <span class="traffic green"></span>
               <span class="window-title">Latest</span>
             </div>
-            <p>Free mentorship, community & opportunities →</p>
+            <p>Free mentorship & opportunities →</p>
           </a>
 
           <nav class="desktop-icons" aria-label="Primary links">
