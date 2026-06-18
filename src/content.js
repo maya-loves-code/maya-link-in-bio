@@ -41,7 +41,7 @@ export const content = {
       url: "APP_ONE_URL",
     },
     {
-      label: "Free mentorship, community & opportunities →",
+      label: "Mentorship & Opportunities",
       detail: "Join Rewriting the Code",
       icon: "spark",
       url: "https://rewritingthecode.org/join-us/?utm_source=tiktok&utm_medium=influencer&utm_campaign=mayalovescode_2026",
