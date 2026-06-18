@@ -1,7 +1,10 @@
 import { content } from "./content.js";
+import { bindAnalyticsLinks, initAnalytics } from "./analytics.js";
 import "./styles.css";
 
 const app = document.querySelector("#app");
+
+initAnalytics();
 
 const isPlaceholderUrl = (url = "") =>
   !url || /^[A-Z0-9_]+$/.test(url) || url === "#";
@@ -52,6 +55,21 @@ const socialIconMarkup = {
 const featuredCtaUrl =
   content.apps.find((item) => item.featuredCta)?.url ?? "#";
 
+const escapeAttr = (value = "") =>
+  String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+const analyticsAttrs = ({ eventName, label, placement, type, url }) => `
+      data-analytics-event="${escapeAttr(eventName)}"
+      data-analytics-label="${escapeAttr(label)}"
+      data-analytics-placement="${escapeAttr(placement)}"
+      data-analytics-type="${escapeAttr(type)}"
+      data-analytics-url="${escapeAttr(url)}"
+`;
+
 function desktopIconMarkup(item, index) {
   return `
     <a
@@ -60,6 +78,13 @@ function desktopIconMarkup(item, index) {
       href="${safeHref(item.url)}"
       ${targetAttrs(item.url)}
       aria-label="${item.ariaLabel ?? `${item.label}: ${item.detail}`}"
+      ${analyticsAttrs({
+        eventName: "Link Click",
+        label: item.label,
+        placement: "link-in-bio",
+        type: "app-card",
+        url: item.url,
+      })}
     >
       <span class="icon-tile ${item.icon}" aria-hidden="true">
         ${iconMarkup[item.icon] ?? ""}
@@ -78,6 +103,13 @@ function dockMarkup(item, index) {
       href="${safeHref(item.url)}"
       ${targetAttrs(item.url)}
       aria-label="${item.label}"
+      ${analyticsAttrs({
+        eventName: "Social Click",
+        label: item.label,
+        placement: "link-in-bio",
+        type: "social",
+        url: item.url,
+      })}
     >
       ${socialIconMarkup[item.platform] ?? ""}
     </a>
@@ -121,6 +153,13 @@ app.innerHTML = `
             href="${safeHref(featuredCtaUrl)}"
             ${targetAttrs(featuredCtaUrl)}
             aria-label="Free mentorship & opportunities"
+            ${analyticsAttrs({
+              eventName: "Featured CTA Click",
+              label: "Free mentorship & opportunities",
+              placement: "link-in-bio",
+              type: "sticky-notification",
+              url: featuredCtaUrl,
+            })}
           >
             <div class="window-bar" aria-hidden="true">
               <span class="traffic red"></span>
@@ -142,7 +181,17 @@ app.innerHTML = `
           </nav>
           <div class="footer-meta">
             <p class="disclosure">${content.affiliateDisclosure}</p>
-            <a class="company-link" href="/mb-creative-enterprises">
+            <a
+              class="company-link"
+              href="/mb-creative-enterprises"
+              ${analyticsAttrs({
+                eventName: "Link Click",
+                label: "MB Creative Enterprises LLC",
+                placement: "footer",
+                type: "company-link",
+                url: "/mb-creative-enterprises",
+              })}
+            >
               MB Creative Enterprises LLC
             </a>
           </div>
@@ -156,3 +205,5 @@ app.innerHTML = `
 document.querySelectorAll('a[aria-disabled="true"]').forEach((link) => {
   link.addEventListener("click", (event) => event.preventDefault());
 });
+
+bindAnalyticsLinks();
