@@ -12,6 +12,7 @@
     "vite": "^8.0.11"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "@vercel/functions": "3.6.3"
   }
 }
