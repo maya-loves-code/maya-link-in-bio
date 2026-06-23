@@ -20,7 +20,6 @@ const targetAttrs = (url) =>
 
 const iconMarkup = {
   play: '<span class="glyph play-glyph"></span>',
-  app: '<span class="glyph coming-soon-glyph">Coming Soon</span>',
   rocket: '<span class="glyph rocket-glyph"></span>',
   spark: '<span class="glyph spark-glyph"></span>',
   coffee: '<span class="glyph coffee-glyph"></span>',
@@ -54,6 +53,7 @@ const socialIconMarkup = {
 
 const featuredCtaUrl =
   content.apps.find((item) => item.featuredCta)?.url ?? "#";
+const launchCtaUrl = content.apps.find((item) => item.launchCta)?.url ?? "#";
 
 const escapeAttr = (value = "") =>
   String(value)
@@ -81,7 +81,7 @@ function desktopIconMarkup(item, index) {
       ${analyticsAttrs({
         eventName: "Link Click",
         label: item.label,
-        placement: "link-in-bio",
+        placement: item.launchCta ? "launch-app-card" : "link-in-bio",
         type: "app-card",
         url: item.url,
       })}
@@ -148,27 +148,51 @@ app.innerHTML = `
             </div>
           </section>
 
-          <a
-            class="window sticky-window"
-            href="${safeHref(featuredCtaUrl)}"
-            ${targetAttrs(featuredCtaUrl)}
-            aria-label="Free mentorship & opportunities"
-            ${analyticsAttrs({
-              eventName: "Featured CTA Click",
-              label: "Free mentorship & opportunities",
-              placement: "link-in-bio",
-              type: "sticky-notification",
-              url: featuredCtaUrl,
-            })}
-          >
-            <div class="window-bar" aria-hidden="true">
-              <span class="traffic red"></span>
-              <span class="traffic yellow"></span>
-              <span class="traffic green"></span>
-              <span class="window-title">Latest</span>
-            </div>
-            <p>Free mentorship & opportunities →</p>
-          </a>
+          <div class="notification-stack">
+            <a
+              class="window sticky-window launch-window"
+              href="${safeHref(launchCtaUrl)}"
+              ${targetAttrs(launchCtaUrl)}
+              aria-label="New: My app is officially live"
+              ${analyticsAttrs({
+                eventName: "Launch CTA Click",
+                label: "My app is officially live",
+                placement: "launch-notification",
+                type: "sticky-notification",
+                url: launchCtaUrl,
+              })}
+            >
+              <div class="window-bar" aria-hidden="true">
+                <span class="traffic red"></span>
+                <span class="traffic yellow"></span>
+                <span class="traffic green"></span>
+                <span class="window-title">New</span>
+              </div>
+              <p><span class="launch-rocket" aria-hidden="true">🚀</span> New: My app is officially live →</p>
+            </a>
+
+            <a
+              class="window sticky-window mentorship-window"
+              href="${safeHref(featuredCtaUrl)}"
+              ${targetAttrs(featuredCtaUrl)}
+              aria-label="Free mentorship & opportunities"
+              ${analyticsAttrs({
+                eventName: "Featured CTA Click",
+                label: "Free mentorship & opportunities",
+                placement: "link-in-bio",
+                type: "sticky-notification",
+                url: featuredCtaUrl,
+              })}
+            >
+              <div class="window-bar" aria-hidden="true">
+                <span class="traffic red"></span>
+                <span class="traffic yellow"></span>
+                <span class="traffic green"></span>
+                <span class="window-title">Latest</span>
+              </div>
+              <p>Free mentorship & opportunities →</p>
+            </a>
+          </div>
 
           <nav class="desktop-icons" aria-label="Primary links">
             ${content.apps.map(desktopIconMarkup).join("")}

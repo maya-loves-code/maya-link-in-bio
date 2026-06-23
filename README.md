@@ -28,7 +28,7 @@ Edit `src/content.js` to replace the placeholder values:
 
 - `profile.photo`: current profile image path, now set to `public/maya-bello-profile.jpg`.
 - `LATEST_YOUTUBE_URL`: latest YouTube video URL.
-- `APP_ONE_URL`: app launching on June 23, 2026.
+- The “Build Your First App” launch CTA links to the Studio app landing page.
 - `APP_TWO_TESTER_FORM_URL`: app currently recruiting testers.
 - `BUY_ME_A_COFFEE_URL`: Buy Me a Coffee profile or support link.
 - `AMAZON_AFFILIATE_LINKS`: Amazon affiliate/storefront URL.
