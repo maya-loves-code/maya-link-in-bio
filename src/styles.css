@@ -282,12 +282,12 @@ h1 {
   text-decoration: none;
   transform: none;
   transition: transform 180ms ease;
-  animation: stickyWindowIn 620ms 360ms ease-out backwards;
+  animation: windowIn 620ms 360ms ease-out backwards;
 }
 
 .launch-window {
   animation:
-    stickyWindowIn 620ms 360ms ease-out backwards,
+    windowIn 620ms 360ms ease-out backwards,
     launchGlow 2.8s 1.2s ease-in-out infinite;
 }
 
@@ -705,18 +705,6 @@ a[aria-disabled="true"] {
 }
 
 @keyframes windowIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px) scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes stickyWindowIn {
   from {
     opacity: 0;
     transform: translateY(16px) scale(0.98);
