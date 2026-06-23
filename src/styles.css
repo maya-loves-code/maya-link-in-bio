@@ -301,9 +301,12 @@ h1 {
 
 .sticky-window:focus-visible,
 .desktop-icon:focus-visible {
-  border-radius: 18px;
   outline: 3px solid var(--yellow);
   outline-offset: 4px;
+}
+
+.desktop-icon:focus-visible {
+  border-radius: 18px;
 }
 
 .sticky-window p {

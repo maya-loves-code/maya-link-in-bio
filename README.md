@@ -28,7 +28,7 @@ Edit the exported `content` object in `src/content.js`:
 
 - `profile`: Maya's name, bio, and profile image.
 - `socials`: social platform labels, icons, and profile URLs.
-- `apps`: primary link cards, including their labels, details, icons, URLs, and featured CTA flags.
+- `apps`: primary link cards, including their labels, details, icons, URLs, and the `featuredCta` and `launchCta` notification flags.
 - `affiliateDisclosure`: the footer disclosure shown beneath the social dock.
 
 ## Deploy To Vercel
