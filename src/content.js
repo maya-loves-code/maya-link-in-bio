@@ -35,10 +35,11 @@ export const content = {
       featured: true,
     },
     {
-      label: "Try My App",
-      detail: "Launching June 23",
-      icon: "app",
-      url: "APP_ONE_URL",
+      label: "Build Your First App",
+      detail: "Turn your idea into reality",
+      icon: "rocket",
+      url: "https://studio.com/apps/maya/ideatoapp",
+      launchCta: true,
     },
     {
       label: "Mentorship & Opportunities",

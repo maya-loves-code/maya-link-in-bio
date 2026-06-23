@@ -24,15 +24,12 @@ Open the local URL Vite prints in the terminal.
 
 ## Update The Content
 
-Edit `src/content.js` to replace the placeholder values:
+Edit the exported `content` object in `src/content.js`:
 
-- `profile.photo`: current profile image path, now set to `public/maya-bello-profile.jpg`.
-- `LATEST_YOUTUBE_URL`: latest YouTube video URL.
-- `APP_ONE_URL`: app launching on June 23, 2026.
-- `APP_TWO_TESTER_FORM_URL`: app currently recruiting testers.
-- `BUY_ME_A_COFFEE_URL`: Buy Me a Coffee profile or support link.
-- `AMAZON_AFFILIATE_LINKS`: Amazon affiliate/storefront URL.
-- `INSTAGRAM_URL`, `TIKTOK_URL`, `YOUTUBE_URL`: social profile URLs.
+- `profile`: Maya's name, bio, and profile image.
+- `socials`: social platform labels, icons, and profile URLs.
+- `apps`: primary link cards, including their labels, details, icons, URLs, and the `featuredCta` and `launchCta` notification flags.
+- `affiliateDisclosure`: the footer disclosure shown beneath the social dock.
 
 ## Deploy To Vercel
 
