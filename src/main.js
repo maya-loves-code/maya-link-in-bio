@@ -54,6 +54,8 @@ const socialIconMarkup = {
 const featuredCtaUrl =
   content.apps.find((item) => item.featuredCta)?.url ?? "#";
 const launchCtaUrl = content.apps.find((item) => item.launchCta)?.url ?? "#";
+const appStoreCtaUrl =
+  "https://apps.apple.com/us/app/side-quest-slayer/id6782196423";
 
 const escapeAttr = (value = "") =>
   String(value)
@@ -151,12 +153,34 @@ app.innerHTML = `
           <div class="notification-stack">
             <a
               class="window sticky-window launch-window"
-              href="${safeHref(launchCtaUrl)}"
-              ${targetAttrs(launchCtaUrl)}
+              href="${safeHref(appStoreCtaUrl)}"
+              ${targetAttrs(appStoreCtaUrl)}
               aria-label="New: My app is officially live"
               ${analyticsAttrs({
-                eventName: "Launch CTA Click",
+                eventName: "App Store CTA Click",
                 label: "My app is officially live",
+                placement: "app-store-notification",
+                type: "sticky-notification",
+                url: appStoreCtaUrl,
+              })}
+            >
+              <div class="window-bar" aria-hidden="true">
+                <span class="traffic red"></span>
+                <span class="traffic yellow"></span>
+                <span class="traffic green"></span>
+                <span class="window-title">New</span>
+              </div>
+              <p>New: My app is officially live →</p>
+            </a>
+
+            <a
+              class="window sticky-window build-window"
+              href="${safeHref(launchCtaUrl)}"
+              ${targetAttrs(launchCtaUrl)}
+              aria-label="Build your first app with AI"
+              ${analyticsAttrs({
+                eventName: "Launch CTA Click",
+                label: "Build your first app with AI",
                 placement: "launch-notification",
                 type: "sticky-notification",
                 url: launchCtaUrl,
@@ -168,7 +192,7 @@ app.innerHTML = `
                 <span class="traffic green"></span>
                 <span class="window-title">New</span>
               </div>
-              <p><span class="launch-rocket" aria-hidden="true">🚀</span> New: My app is officially live →</p>
+              <p><span class="launch-rocket" aria-hidden="true">🚀</span> Build your first app with AI →</p>
             </a>
 
             <a

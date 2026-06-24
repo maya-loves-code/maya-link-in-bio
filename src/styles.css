@@ -291,8 +291,12 @@ h1 {
     launchGlow 2.8s 1.2s ease-in-out infinite;
 }
 
-.mentorship-window {
+.build-window {
   animation-delay: 460ms;
+}
+
+.mentorship-window {
+  animation-delay: 560ms;
 }
 
 .sticky-window:hover {
