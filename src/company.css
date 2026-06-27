@@ -383,4 +383,12 @@ h1 {
   html {
     scroll-behavior: auto;
   }
+
+  .product-card {
+    transition: none;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
 }
