@@ -222,10 +222,10 @@ app.innerHTML = `
               class="window sticky-window mentorship-window"
               href="${safeHref(featuredCtaUrl)}"
               ${targetAttrs(featuredCtaUrl)}
-              aria-label="Free mentorship & opportunities"
+              aria-label="Free mentorship for women in tech"
               ${analyticsAttrs({
                 eventName: "Featured CTA Click",
-                label: "Free mentorship & opportunities",
+                label: "Free mentorship for women in tech",
                 placement: "link-in-bio",
                 type: "sticky-notification",
                 url: featuredCtaUrl,
@@ -237,7 +237,7 @@ app.innerHTML = `
                 <span class="traffic green"></span>
                 <span class="window-title">Latest</span>
               </div>
-              <p>Free mentorship & opportunities →</p>
+              <p>Free mentorship for women in tech →</p>
             </a>
           </div>
 
