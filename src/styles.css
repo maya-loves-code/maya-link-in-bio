@@ -60,7 +60,7 @@ img {
 }
 
 .page-shell {
-  width: min(100%, 1080px);
+  width: min(100%, 1440px);
   min-height: 100vh;
   min-height: 100svh;
   display: grid;
@@ -70,7 +70,7 @@ img {
 }
 
 .laptop {
-  width: min(100%, 940px);
+  width: min(100%, 1280px);
   display: grid;
   justify-items: center;
   animation: desktopBoot 780ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
@@ -162,7 +162,7 @@ img {
   z-index: 2;
   min-height: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "profile icons"
@@ -270,9 +270,10 @@ h1 {
 
 .notification-stack {
   grid-area: note;
-  width: min(100%, 340px);
+  width: 100%;
   align-self: start;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -690,7 +691,7 @@ h1 {
 }
 
 .laptop-base {
-  width: min(88%, 760px);
+  width: min(88%, 1040px);
   height: 18px;
   border-radius: 0 0 34px 34px;
   background:
@@ -873,6 +874,7 @@ a[aria-disabled="true"] {
 
   .notification-stack {
     width: 100%;
+    grid-template-columns: 1fr;
   }
 
   .sticky-window {
