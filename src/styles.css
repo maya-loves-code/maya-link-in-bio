@@ -295,8 +295,12 @@ h1 {
   animation-delay: 460ms;
 }
 
-.mentorship-window {
+.runway-window {
   animation-delay: 560ms;
+}
+
+.mentorship-window {
+  animation-delay: 660ms;
 }
 
 .sticky-window:hover {
@@ -319,6 +323,24 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.32;
+}
+
+.sticky-window .promo-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.sticky-window .promo-copy strong {
+  font-size: 1.02rem;
+  line-height: 1.16;
+  overflow-wrap: anywhere;
+}
+
+.sticky-window .promo-copy span {
+  color: rgba(23, 51, 49, 0.76);
+  font-size: 0.86rem;
+  font-weight: 750;
+  overflow-wrap: anywhere;
 }
 
 .launch-rocket {

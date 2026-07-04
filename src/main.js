@@ -56,6 +56,7 @@ const featuredCtaUrl =
 const launchCtaUrl = content.apps.find((item) => item.launchCta)?.url ?? "#";
 const appStoreCtaUrl =
   "https://apps.apple.com/us/app/side-quest-slayer/id6782196423";
+const runwayPromoUrl = "https://runwayml.com/pricing";
 
 const escapeAttr = (value = "") =>
   String(value)
@@ -193,6 +194,28 @@ app.innerHTML = `
                 <span class="window-title">New</span>
               </div>
               <p><span class="launch-rocket" aria-hidden="true">🚀</span> Build your first app with AI →</p>
+            </a>
+
+            <a
+              class="window sticky-window runway-window"
+              href="${safeHref(runwayPromoUrl)}"
+              ${targetAttrs(runwayPromoUrl)}
+              aria-label="25% off Runway plans with code MAYALOVESCODE25"
+              ${analyticsAttrs({
+                eventName: "Runway Promo Click",
+                label: "25% off Runway plans",
+                placement: "runway-promo-notification",
+                type: "sticky-notification",
+                url: runwayPromoUrl,
+              })}
+            >
+              <div class="window-bar" aria-hidden="true">
+                <span class="traffic red"></span>
+                <span class="traffic yellow"></span>
+                <span class="traffic green"></span>
+                <span class="window-title">Partner deal</span>
+              </div>
+              <p class="promo-copy"><strong>25% off Runway plans →</strong><span>Use code MAYALOVESCODE25</span></p>
             </a>
 
             <a

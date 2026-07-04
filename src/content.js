@@ -69,5 +69,5 @@ export const content = {
     },
   ],
   affiliateDisclosure:
-    "Amazon links may be affiliate links. I may earn a commission at no extra cost to you.",
+    "Amazon links and partner promos, including Runway, may earn me a commission at no extra cost to you.",
 };
