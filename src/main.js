@@ -156,10 +156,10 @@ app.innerHTML = `
               class="window sticky-window launch-window"
               href="${safeHref(appStoreCtaUrl)}"
               ${targetAttrs(appStoreCtaUrl)}
-              aria-label="New: My app is officially live"
+              aria-label="Follow the million-dollar app experiment. Try Side Quest Slayer"
               ${analyticsAttrs({
                 eventName: "App Store CTA Click",
-                label: "My app is officially live",
+                label: "Follow the million-dollar app experiment — Try Side Quest Slayer",
                 placement: "app-store-notification",
                 type: "sticky-notification",
                 url: appStoreCtaUrl,
@@ -171,17 +171,17 @@ app.innerHTML = `
                 <span class="traffic green"></span>
                 <span class="window-title">New</span>
               </div>
-              <p>New: My app is officially live →</p>
+              <p class="promo-copy"><strong>Follow the million-dollar app experiment →</strong><span><em>Try Side Quest Slayer</em></span></p>
             </a>
 
             <a
               class="window sticky-window build-window"
               href="${safeHref(launchCtaUrl)}"
               ${targetAttrs(launchCtaUrl)}
-              aria-label="Build your first app with AI"
+              aria-label="Learn to build your own app"
               ${analyticsAttrs({
                 eventName: "Launch CTA Click",
-                label: "Build your first app with AI",
+                label: "Learn to build your own app",
                 placement: "launch-notification",
                 type: "sticky-notification",
                 url: launchCtaUrl,
@@ -193,7 +193,7 @@ app.innerHTML = `
                 <span class="traffic green"></span>
                 <span class="window-title">New</span>
               </div>
-              <p><span class="launch-rocket" aria-hidden="true">🚀</span> Build your first app with AI →</p>
+              <p><span class="launch-rocket" aria-hidden="true">🚀</span> Learn to build your own app -&gt;</p>
             </a>
 
             <a
