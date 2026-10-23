@@ -53,7 +53,6 @@ const socialIconMarkup = {
 
 const featuredCtaUrl =
   content.apps.find((item) => item.featuredCta)?.url ?? "#";
-const launchCtaUrl = content.apps.find((item) => item.launchCta)?.url ?? "#";
 const appStoreCtaUrl =
   "https://apps.apple.com/us/app/side-quest-slayer/id6782196423";
 const runwayPromoUrl = "https://runwayml.com/pricing";
@@ -172,28 +171,6 @@ app.innerHTML = `
                 <span class="window-title">New</span>
               </div>
               <p class="promo-copy"><strong>Follow the million-dollar app experiment →</strong><span><em>Try Side Quest Slayer</em></span></p>
-            </a>
-
-            <a
-              class="window sticky-window build-window"
-              href="${safeHref(launchCtaUrl)}"
-              ${targetAttrs(launchCtaUrl)}
-              aria-label="Learn to build your own app"
-              ${analyticsAttrs({
-                eventName: "Launch CTA Click",
-                label: "Learn to build your own app",
-                placement: "launch-notification",
-                type: "sticky-notification",
-                url: launchCtaUrl,
-              })}
-            >
-              <div class="window-bar" aria-hidden="true">
-                <span class="traffic red"></span>
-                <span class="traffic yellow"></span>
-                <span class="traffic green"></span>
-                <span class="window-title">New</span>
-              </div>
-              <p><span class="launch-rocket" aria-hidden="true">🚀</span> Learn to build your own app -&gt;</p>
             </a>
 
             <a
