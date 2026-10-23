@@ -35,13 +35,6 @@ export const content = {
       featured: true,
     },
     {
-      label: "Mentorship & Opportunities",
-      detail: "Join Rewriting the Code",
-      icon: "spark",
-      url: "https://rewritingthecode.org/join-us/?utm_source=tiktok&utm_medium=influencer&utm_campaign=mayalovescode_2026",
-      featuredCta: true,
-    },
-    {
       label: "Buy Me a Coffee",
       detail: "Support my work",
       icon: "coffee",
@@ -62,5 +55,5 @@ export const content = {
     },
   ],
   affiliateDisclosure:
-    "Amazon links and partner promos, including Runway, may earn me a commission at no extra cost to you.",
+    "Amazon links may earn me a commission at no extra cost to you.",
 };
