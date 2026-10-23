@@ -51,12 +51,8 @@ const socialIconMarkup = {
   `,
 };
 
-const featuredCtaUrl =
-  content.apps.find((item) => item.featuredCta)?.url ?? "#";
-const launchCtaUrl = content.apps.find((item) => item.launchCta)?.url ?? "#";
 const appStoreCtaUrl =
   "https://apps.apple.com/us/app/side-quest-slayer/id6782196423";
-const runwayPromoUrl = "https://runwayml.com/pricing";
 
 const escapeAttr = (value = "") =>
   String(value)
@@ -172,72 +168,6 @@ app.innerHTML = `
                 <span class="window-title">New</span>
               </div>
               <p class="promo-copy"><strong>Follow the million-dollar app experiment →</strong><span><em>Try Side Quest Slayer</em></span></p>
-            </a>
-
-            <a
-              class="window sticky-window build-window"
-              href="${safeHref(launchCtaUrl)}"
-              ${targetAttrs(launchCtaUrl)}
-              aria-label="Learn to build your own app"
-              ${analyticsAttrs({
-                eventName: "Launch CTA Click",
-                label: "Learn to build your own app",
-                placement: "launch-notification",
-                type: "sticky-notification",
-                url: launchCtaUrl,
-              })}
-            >
-              <div class="window-bar" aria-hidden="true">
-                <span class="traffic red"></span>
-                <span class="traffic yellow"></span>
-                <span class="traffic green"></span>
-                <span class="window-title">New</span>
-              </div>
-              <p><span class="launch-rocket" aria-hidden="true">🚀</span> Learn to build your own app -&gt;</p>
-            </a>
-
-            <a
-              class="window sticky-window runway-window"
-              href="${safeHref(runwayPromoUrl)}"
-              ${targetAttrs(runwayPromoUrl)}
-              aria-label="25% off Runway plans with code MAYALOVESCODE25"
-              ${analyticsAttrs({
-                eventName: "Runway Promo Click",
-                label: "25% off Runway plans",
-                placement: "runway-promo-notification",
-                type: "sticky-notification",
-                url: runwayPromoUrl,
-              })}
-            >
-              <div class="window-bar" aria-hidden="true">
-                <span class="traffic red"></span>
-                <span class="traffic yellow"></span>
-                <span class="traffic green"></span>
-                <span class="window-title">Partner deal</span>
-              </div>
-              <p class="promo-copy"><strong>25% off Runway plans →</strong><span>Use code MAYALOVESCODE25</span></p>
-            </a>
-
-            <a
-              class="window sticky-window mentorship-window"
-              href="${safeHref(featuredCtaUrl)}"
-              ${targetAttrs(featuredCtaUrl)}
-              aria-label="Free mentorship for women in tech"
-              ${analyticsAttrs({
-                eventName: "Featured CTA Click",
-                label: "Free mentorship for women in tech",
-                placement: "link-in-bio",
-                type: "sticky-notification",
-                url: featuredCtaUrl,
-              })}
-            >
-              <div class="window-bar" aria-hidden="true">
-                <span class="traffic red"></span>
-                <span class="traffic yellow"></span>
-                <span class="traffic green"></span>
-                <span class="window-title">Latest</span>
-              </div>
-              <p>Free mentorship for women in tech →</p>
             </a>
           </div>
 
