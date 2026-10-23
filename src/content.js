@@ -35,13 +35,6 @@ export const content = {
       featured: true,
     },
     {
-      label: "Build Your First App",
-      detail: "Turn your idea into reality",
-      icon: "rocket",
-      url: "https://studio.com/apps/maya/ideatoapp",
-      launchCta: true,
-    },
-    {
       label: "Mentorship & Opportunities",
       detail: "Join Rewriting the Code",
       icon: "spark",
